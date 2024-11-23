@@ -42,15 +42,15 @@ public class UICheckTestScript : MonoBehaviour
     {
         return diff switch
         {
-            DifficultyThreshold.Blue => "F,터짐",
-            DifficultyThreshold.Green => "C,뉴비?",
-            DifficultyThreshold.Gray => "B,고수",
-            DifficultyThreshold.Black => "A,혹시 샌즈세요???",
-            DifficultyThreshold.White => "S,썩은물",
-            DifficultyThreshold.Purple => "SS,쿄시키 무라사키",
-            DifficultyThreshold.RGB => "SSS,프로 게이머",
-            DifficultyThreshold.Progamer => "완전하이퍼개잘함미친회피의신갓오브갓그는누구인가충무공마제스티말도안돼뉴네오젤리게임의신,미안하다 이거 보여주려고 어그로 끌었다",
-            _ => "언더테일,아시는구나",
+            DifficultyThreshold.Blue => "F,Failure",
+            DifficultyThreshold.Green => "C,Commonfolk",
+            DifficultyThreshold.Gray => "B,Brilliant",
+            DifficultyThreshold.Black => "A,Are you Sans?????",
+            DifficultyThreshold.White => "S,Super Professional",
+            DifficultyThreshold.Purple => "SS,Sick Skills",
+            DifficultyThreshold.RGB => "SSS,Supreme Sour Smore",
+            DifficultyThreshold.Progamer => "J,Jelly Master",
+            _ => "the., what",
         };
     }
 

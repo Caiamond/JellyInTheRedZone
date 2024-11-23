@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class PlayerInput : MonoBehaviour
 {
     public bool UseController = false;
+    public float AimAssistMinimumDot = 0.9f;
     public bool isDead = false;
     private MovementComponent movementComponent;
     private WeaponHandler weaponHandler;
@@ -77,29 +78,7 @@ public class PlayerInput : MonoBehaviour
     }
     void Update()
     {
-        /*
-        Vector2 direction = Vector2.zero;
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            direction.y += 1;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            direction.y += -1;
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            direction.x += 1;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            direction.x += -1;
-        }
-        */
-
-        if (isDead) {return;}
+        if (isDead) { return; }
 
         movementComponent.Direction = direction;
 
@@ -121,7 +100,7 @@ public class PlayerInput : MonoBehaviour
                 }
             }
 
-            if (targetPosition != Vector2.zero && biggestDot > 0.9)
+            if (targetPosition != Vector2.zero && biggestDot > AimAssistMinimumDot)
             {
                 mouseWorldPos = targetPosition;
             }

@@ -27,7 +27,7 @@
                     "name": "Shoot",
                     "type": "Value",
                     "id": "bf68f261-b5d0-49e2-881c-81cfa36a78fd",
-                    "expectedControlType": "Digital",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -45,6 +45,15 @@
                     "name": "Controller",
                     "type": "Button",
                     "id": "b3befda3-7e6f-4c6a-be8c-b9ed0a611b02",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Bomb",
+                    "type": "Button",
+                    "id": "07df138e-4e38-47aa-9d66-b8aa3aabd961",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -214,6 +223,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Controller",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "49af726c-39c4-40d2-bb64-494901a2692f",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bomb",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8755f313-70d4-4b95-a388-a77c5a809291",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bomb",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

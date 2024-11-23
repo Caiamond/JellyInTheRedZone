@@ -352,6 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf94babed0a3393489db7c58a97fc00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseController: 0
+  AimAssistMinimumDot: 0.9
+  isDead: 0
 --- !u!114 &3438949899285542198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 35
   Health: 0
+  HealthPickupObject: {fileID: 0}
 --- !u!58 &469740680591616170
 CircleCollider2D:
   m_ObjectHideFlags: 0

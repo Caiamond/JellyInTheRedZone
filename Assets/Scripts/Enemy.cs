@@ -30,7 +30,6 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (target == null)
         {
             target = GameObject.FindGameObjectWithTag("Player");
         }
@@ -43,6 +42,8 @@ public class Enemy : MonoBehaviour
         {
             weapon = gameObject.GetComponent<Weapon>();
         }
+
+        AttackBurstTimer = AttackBurstCooldown + RandomBurstCooldown;
     }
 
     // Update is called once per frame

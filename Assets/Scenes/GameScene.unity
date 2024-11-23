@@ -5889,7 +5889,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 668aa7aac3a4ee34c8f7d1272d58e7aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: -1836336489612790746, guid: 668aa7aac3a4ee34c8f7d1272d58e7aa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5897,7 +5897,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5953,7 +5953,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 114.07638, z: 0, w: 120.99008}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &676301374
@@ -5995,6 +5995,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bomb: {fileID: 8107246754129432375, guid: 1bd6cae2396736b40abba8187d2037f9, type: 3}
   Jelly: {fileID: 190048311222626753, guid: a521f65053b37a1439228f071ecde071, type: 3}
+  Bombs: {fileID: 1419914380}
+  Enemys: {fileID: 1902446748}
   PointText: {fileID: 2140263134}
   Points: 0
   MaxBombCD: 1.5
@@ -6496,11 +6498,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 10
   Health: 0
+  HealthPickupObject: {fileID: 0}
 --- !u!224 &1256075760 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6203961935100205719, guid: 2e1af00abcaffa241b0067516d29105a, type: 3}
   m_PrefabInstance: {fileID: 2111537647334122236}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419914380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419914381}
+  m_Layer: 0
+  m_Name: Bombs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1419914381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419914380}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1463685958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6845,7 +6879,7 @@ MonoBehaviour:
   m_text: "\uBBF8\uC548\uD558\uB2E4 \uC774\uAC70 \uBCF4\uC5EC\uC8FC\uB824\uACE0 \uC5B4\uADF8\uB85C
     \uB04C\uC5C8\uB2E4"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fe62fdc028c402d49babf9f86954dc13, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: -1836336489612790746, guid: fe62fdc028c402d49babf9f86954dc13, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6909,7 +6943,7 @@ MonoBehaviour:
   m_margin: {x: -299.59436, y: 0, z: -298.442, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1751108231
@@ -6920,6 +6954,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751108228}
   m_CullTransparentMesh: 1
+--- !u!1 &1902446748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902446749}
+  m_Layer: 0
+  m_Name: Enemys
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1902446749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902446748}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949163785
 GameObject:
   m_ObjectHideFlags: 0
@@ -7370,3 +7435,5 @@ SceneRoots:
   - {fileID: 1463685961}
   - {fileID: 995692055}
   - {fileID: 910351007}
+  - {fileID: 1419914381}
+  - {fileID: 1902446749}

@@ -26,6 +26,9 @@ public class GameHandler : MonoBehaviour
     public GameObject Bomb;
     public GameObject Jelly;
 
+    public GameObject Bombs;
+    public GameObject Enemys;
+
     public TextMeshProUGUI PointText;
 
     public int Points = 0;
@@ -142,13 +145,14 @@ public class GameHandler : MonoBehaviour
 
     void SpawnBomb()
     {
-        GameObject newBomb = Instantiate(Bomb, new Vector2(Random.Range(-12, 12), Random.Range(-4.5f, 8)), Quaternion.identity);
+        GameObject newBomb = Instantiate(Bomb, new Vector2(Random.Range(-12, 12), Random.Range(-4.5f, 8)), Quaternion.identity, Bombs.transform);
         newBomb.transform.localScale = Vector2.one * Random.Range(3f, 10f);
+        
     }
 
     void SpawnJelly()
     {
-        GameObject newJelly = Instantiate(Jelly, new Vector2(Random.Range(-12, 12), Random.Range(-4.5f, 8)), Quaternion.identity);
+        GameObject newJelly = Instantiate(Jelly, new Vector2(Random.Range(-12, 12), Random.Range(-4.5f, 8)), Quaternion.identity, Enemys.transform);
     }
 
     void AddPoints(int point)
